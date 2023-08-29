@@ -1,14 +1,21 @@
 body {
     background-color: #333;
+    overflow: hidden; /* Prevents horizontal scrollbar caused by animations */
 }
 
 .jobs {
     background-color: #222;
     color: #fff;
+    position: relative; /* Required for the animation to be positioned correctly */
 }
 
 .jobs h2 {
     color: #f39c12;
+}
+
+.job-card-link {
+    display: block; /* Make the whole card clickable */
+    text-decoration: none; /* Remove underline on the link */
 }
 
 .job-card {
@@ -16,6 +23,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* Ensure the card content appears above the animation */
 }
 
 .job-card h3 {
@@ -24,6 +33,29 @@ body {
 
 .job-description {
     color: #ccc;
+}
+
+/* Animation styles */
+.jobs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+    animation: animateDots 10s linear infinite;
+}
+
+@keyframes animateDots {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
 }
 
 footer {
