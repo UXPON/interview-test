@@ -1,98 +1,40 @@
-<html>
-  <body>
-<h2>Section 1: Animation and Three.js</h2><br />
-*Please answer the following questions related to animation techniques and three.js:*<br />
-<br />
-1. Explain the concept of keyframes in animations. How are they used to create smooth transitions between different states?<br />
-<br />
-2. Provide an example of a CSS property that can be animated using CSS animations. Write a basic CSS animation code snippet for this property.<br />
-<br />
-3. What is the purpose of requestAnimationFrame in JavaScript animations? How does it differ from using setTimeout or setInterval?<br />
-<br />
-4. Imagine you are tasked with creating a 3D animated scene using three.js. Briefly outline the essential steps you would take to set up the scene and animate a 3D object within it.<br />
-<br />
-<h2>Section 2: Website Responsiveness</h2><br />
-*Please answer the following questions related to responsive web design:*<br />
-<br />
-1. Define what a responsive website design is and why it's important in today's digital landscape.<br />
-<br />
-2. Describe the mobile-first approach in responsive design. What are the benefits of designing for mobile devices first?<br />
-<br />
-3. List three CSS media features that can be used to apply styles based on the user's device characteristics.<br />
-<br />
-4. Explain how you would approach optimizing images for different screen sizes in a responsive website.<br />
-<br />
-<h2>Section 3: Performance Optimization</h2><br />
-*Please answer the following questions related to performance optimization:*<br />
-<br />
-1. Describe the term "render-blocking" as it relates to web performance. How can you mitigate the impact of render-blocking resources?<br />
-<br />
-2. What is lazy loading in the context of web development? How does it contribute to improved page load times?<br />
-<br />
-3. Name two techniques to reduce the load time of a web page. Provide a brief explanation of each.<br />
-<br />
-4. Explain the difference between minification and compression of web assets (JavaScript, CSS, etc.), and why they are important for performance.<br />
-<br />
-<h2>Section 4: Practical Problem-Solving</h2><br />
-<br />
-<h3>Task: Create an Animated and Lazily Loaded Webpage</h3><br />
-<br />
-In this task, you'll be creating a simple webpage that showcases an animated element and implements lazy loading for images.<br />
-<br />
-<h3>Requirements:</h3><br />
-<br />
-1. <b>HTML Structure:</b> Start by creating the basic structure of the webpage using HTML. Include a header, a section for the animated element, and a gallery of images that need to be lazily loaded.<br />
-<br />
-2. <b>CSS Styling:</b> Apply basic CSS styling to make the webpage visually appealing. You can use your preferred styling techniques, but ensure the webpage is responsive.<br />
-<br />
-3. <b>Animation:</b> Create a CSS-animated element (such as a bouncing ball or a rotating icon) within the designated section. The animation should be smooth and engaging.<br />
-<br />
-4. <b>Lazy Loading:</b> Implement lazy loading for the gallery images using the Intersection Observer API. The images should only load when they come into the viewport.<br />
-<br />
-5. <b>User Experience:</b> When the images are loaded, apply a subtle fade-in animation to enhance the user experience.<br />
-<br />
-<h3>Step-by-Step Guide:</h3><br />
-<br />
-1. <b>HTML Setup:</b><br />
-   - Create an HTML file and set up the basic structure with `<html>`, `<head>`, and `<body>` elements.<br />
-   - Inside the `<body>`, create a `<header>` element with a title.<br />
-   - Create a `<section>` element with a unique identifier for the animated element.<br />
-   - Within the section, add an `<img>` tag to represent the animated element.<br />
-<br />
-2. <b>CSS Styling:</b><br />
-   - Link a CSS file to your HTML document.<br />
-   - Apply CSS styles to achieve the desired layout and appearance for the header, section, and animated element.<br />
-   - Implement CSS animations for the animated element using `@keyframes` and `animation` properties.<br />
-<br />
-3. <b>Animation:</b><br />
-   - In your CSS file, define a new `@keyframes` animation that animates the animated element. For example, you can make it bounce or rotate.<br />
-   - Apply this animation to the animated element using the `animation` property.<br />
-<br />
-4. <b>Lazy Loading:</b><br />
-   - Create a JavaScript file and link it to your HTML document.<br />
-   - In the JavaScript file, use the Intersection Observer API to observe the gallery images.<br />
-   - When an image comes into the viewport, update its `src` attribute to trigger the lazy loading effect.<br />
-<br />
-5. <b>Fade-In Animation:</b><br />
-   - Apply a CSS transition property to the images to create a smooth fade-in effect when they load.<br />
-<br />
-6. <b>Testing:</b><br />
-   - Test your webpage in different browsers and screen sizes to ensure responsiveness and proper functionality.<br />
-<br />
-<h3>Submission:</h3><br />
-<br />
-Please provide your HTML, CSS, and JavaScript files along with any additional assets (such as images) in a compressed archive (e.g., ZIP format). Include clear comments in your code to explain your approach and any significant code sections.<br />
-<br />
-<b>Note:</b> You are not required to host the webpage online. Providing the source code is sufficient for assessment.<br />
-<br />
-<h3>Evaluation Criteria:</h3><br />
-<br />
-You will be evaluated based on the following criteria:<br />
-- Correct implementation of HTML structure, CSS styling, and animations.<br />
-- Proper implementation of the Intersection Observer API for lazy loading images.<br />
-- Smooth and visually pleasing animations.<br />
-- Code readability, organization, and comments.<br />
-<br />
-Good luck with the coding challenge! We look forward to reviewing your creative and technically sound solution.<br />
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>UXPon for Employee</title>
+</head>
+<body>
+    <header>
+        <h1>UXPon for Employee</h1>
+        <p>We need anyone with talent to bring value to the world</p>
+    </header>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Feature 1</h2>
+            <p>This is the first feature description.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 2</h2>
+            <p>This is the second feature description.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 3</h2>
+            <p>This is the third feature description.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Join Us?</h2>
+        <p>Apply now and become a part of our talented team.</p>
+        <a href="#" class="button">Apply Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 UXPon. All rights reserved.</p>
+    </footer>
+</body>
 </html>
