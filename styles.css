@@ -1,23 +1,34 @@
 body {
     background-color: #000;
-    overflow: hidden; /* Prevents horizontal scrollbar caused by animations */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .jobs {
     background-color: transparent;
     color: #fff;
-    position: relative; /* Required for the animation to be positioned correctly */
-    z-index: 1; /* Ensure the card content appears above the animation */
-    padding-top: 60px; /* Add space for the header */
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
 .jobs h2 {
     color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .job-card-link {
-    display: block; /* Make the whole card clickable */
-    text-decoration: none; /* Remove underline on the link */
+    display: block;
+    text-decoration: none;
 }
 
 .job-card {
@@ -26,11 +37,12 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 1; /* Ensure the card content appears above the animation */
+    z-index: 1;
 }
 
 .job-card h3 {
     color: #f39c12;
+    margin-bottom: 10px;
 }
 
 .job-description {
