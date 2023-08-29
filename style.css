@@ -2,17 +2,28 @@ body {
     background-color: #333;
 }
 
-.features {
-    background-color: #444;
+.jobs {
+    background-color: #222;
     color: #fff;
 }
 
-.features h2 {
+.jobs h2 {
     color: #f39c12;
 }
 
-.cta {
-    background-color: #222;
+.job-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+    color: #f39c12;
+}
+
+.job-description {
+    color: #ccc;
 }
 
 footer {
