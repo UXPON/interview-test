@@ -1,42 +1,26 @@
-body {
-    background-color: #111;
-    font-family: Arial, sans-serif;
-}
-
-#hero {
-    padding: 100px 0;
-}
-
-#hero h1 {
-    font-size: 3rem;
-}
-
-#job-posting {
-    background-color: #222;
-}
-
-.card {
+.dark-card {
     background-color: #333;
     border: none;
     border-radius: 10px;
     padding: 20px;
+    margin: 0 10px;
 }
 
-.card-title {
+.dark-card .card-title {
     font-size: 1.5rem;
     color: #fff;
 }
 
-.card-text {
+.dark-card .card-text {
     color: #ccc;
 }
 
-.btn-primary {
+.dark-card .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
 }
 
-.btn-primary:hover {
+.dark-card .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
