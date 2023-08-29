@@ -8,6 +8,7 @@ body {
     color: #fff;
     position: relative; /* Required for the animation to be positioned correctly */
     z-index: 1; /* Ensure the card content appears above the animation */
+    padding-top: 60px; /* Add space for the header */
 }
 
 .jobs h2 {
@@ -59,4 +60,8 @@ body {
 
 footer {
     background-color: #111;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
