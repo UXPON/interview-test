@@ -25,10 +25,12 @@
             padding: 20px;
             border-radius: 10px;
         }
+
         .h2 {
             font-size: 20px;
             margin: 12px 0;
         }
+
         .answer {
             font-style: italic;
         }
@@ -49,9 +51,14 @@
         <div class="col-md-12">
             <section class="section">
                 <h2 class="h2">Section 1: General Knowledge</h2>
-                <p class="question"><strong>Q: Can you explain the key differences between native app development and cross-platform development using React Native or Vue Native?</strong></p>
+                <p class="question"><strong>Q: Can you explain the key differences between native app development and
+                        cross-platform development using React Native or Vue Native?</strong></p>
                 <p class="answer"><span class="answer">A:</span> Native app development involves creating apps
-                    specifically for a single platform, such as iOS or Android, using platform-specific languages and tools (Swift/Objective-C for iOS, Java/Kotlin for Android). Cross-platform development with React Native or Vue Native allows developers to write code once and deploy it on multiple platforms. These frameworks use JavaScript or TypeScript and provide a bridge to native components, offering a balance between code reusability and native performance.</p>
+                    specifically for a single platform, such as iOS or Android, using platform-specific languages and
+                    tools (Swift/Objective-C for iOS, Java/Kotlin for Android). Cross-platform development with React
+                    Native or Vue Native allows developers to write code once and deploy it on multiple platforms. These
+                    frameworks use JavaScript or TypeScript and provide a bridge to native components, offering a
+                    balance between code reusability and native performance.</p>
 
                 <p class="question"><strong>Q: How do you optimize the performance of a mobile app, and what tools or
                         techniques do you use for profiling and debugging?</strong></p>
@@ -125,6 +132,154 @@
                     suggestions for users. This feature significantly improved user engagement and sales. Additionally,
                     I optimized the checkout process, reducing cart abandonment rates by streamlining the payment flow
                     and enhancing the user experience.</p>
+            </section>
+            <section class="interview-section">
+                <h2 class="question-section">Section 4: Practical Skills</h2>
+
+                <p class="question"><strong>Q:</strong> During this interview, we'd like you to demonstrate your
+                    coding skills. Please take a few minutes to code a simple mobile app component that displays a list
+                    of items fetched from a mock API. You can choose either React Native or Vue Native for this
+                    exercise.</p>
+                <div class="answer">
+            <pre><code>// In React Native
+import React, { useEffect, useState } from 'react';
+import { View, Text, FlatList } from 'react-native';
+
+const MockAPIResponse = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+  // Add more items here...
+];
+
+const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Simulate API call (e.g., fetching data from a server)
+    setTimeout(() => {
+      setData(MockAPIResponse);
+    }, 1000);
+  }, []);
+
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;List of Items:&lt;/Text&gt;
+      &lt;FlatList
+        data={data}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => &lt;Text&gt;{item.name}&lt;/Text&gt;}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default App;</code></pre>
+                </div>
+
+                <p class="question"><strong>Q:</strong> Imagine you're tasked with adding a smooth transition effect
+                    between two screens in a mobile app. How would you approach this task, and what code would you write
+                    to achieve it?</p>
+                <div class="answer">
+            <pre><code>// In React Native
+
+// Install React Navigation and necessary dependencies if not already installed:
+// npm install @react-navigation/native @react-navigation/stack react-native-reanimated
+
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+
+// Screen 1
+const Screen1 = ({ navigation }) => (
+  &lt;View&gt;
+    &lt;Text&gt;Screen 1&lt;/Text&gt;
+    &lt;TouchableOpacity onPress={() => navigation.navigate('Screen2')}&gt;
+      &lt;Text&gt;Go to Screen 2&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  &lt;/View&gt;
+);
+
+// Screen 2
+const Screen2 = ({ navigation }) => (
+  &lt;View&gt;
+    &lt;Text&gt;Screen 2&lt;/Text&gt;
+    &lt;TouchableOpacity onPress={() => navigation.goBack()}&gt;
+      &lt;Text&gt;Go Back&lt;/Text&gt;
+    &lt;/TouchableOpacity&gt;
+  &lt;/View&gt;
+);
+
+const Stack = createStackNavigator();
+
+const App = () => (
+  &lt;NavigationContainer&gt;
+    &lt;Stack.Navigator
+      initialRouteName="Screen1"
+      screenOptions={{
+        ...TransitionPresets.SlideFromRightIOS, // Use the desired transition preset
+      }}
+    &gt;
+      &lt;Stack.Screen name="Screen1" component={Screen1} /&gt;
+      &lt;Stack.Screen name="Screen2" component={Screen2} /&gt;
+    &lt;/Stack.Navigator&gt;
+  &lt;/NavigationContainer&gt;
+);
+
+export default App;</code></pre>
+                </div>
+
+                <p class="question"><strong>Q:</strong> Please walk us through your process for deploying a mobile app
+                    to App Center (or another preferred platform). What steps are involved, and how do you ensure a
+                    successful deployment?</p>
+                <div class="answer">
+                    <p><strong>A:</strong></p>
+                    <ol>
+                        <li><strong>Setting up the Project:</strong> Ensure your mobile app project is properly set up,
+                            and you have the necessary build files and configurations.
+                        </li>
+                        <li><strong>Creating an App on App Center:</strong> Log in to your App Center account, create a
+                            new app, and select the platform (iOS or Android).
+                        </li>
+                        <li><strong>Connecting to Version Control:</strong> Connect your app to a version control system
+                            (e.g., GitHub, Bitbucket) to enable continuous integration.
+                        </li>
+                        <li><strong>Configuring Build and Release:</strong> Configure build settings, such as build
+                            scripts and environment variables, for both development and production builds.
+                        </li>
+                        <li><strong>Triggering Builds:</strong> Set up triggers to automatically start builds whenever
+                            code changes are pushed to the repository.
+                        </li>
+                        <li><strong>Testing:</strong> Use App Center's testing tools to run automated tests and ensure
+                            the app functions correctly.
+                        </li>
+                        <li><strong>Code Signing:</strong> Configure code signing for iOS and Android to ensure the app
+                            can be installed on devices.
+                        </li>
+                        <li><strong>Distribution:</strong> Specify distribution groups or release tracks for
+                            distributing the app to testers, beta users, or the public.
+                        </li>
+                        <li><strong>Monitoring and Analytics:</strong> Integrate monitoring and analytics tools to track
+                            app performance and user behavior.
+                        </li>
+                        <li><strong>Deployment Strategy:</strong> Define a deployment strategy, such as staged rollouts,
+                            to mitigate any issues that may arise after release.
+                        </li>
+                        <li><strong>Release:</strong> Initiate the release process, and monitor the deployment progress.
+                        </li>
+                        <li><strong>Monitoring and Feedback:</strong> Continuously monitor the app's performance,
+                            collect user feedback, and address any issues promptly.
+                        </li>
+                        <li><strong>Post-Deployment Tasks:</strong> After a successful deployment, perform
+                            post-deployment tasks like version updates and bug fixes as needed.
+                        </li>
+                    </ol>
+                    <p>To ensure a successful deployment, thorough testing, clear documentation, and effective
+                        communication within the development and operations teams are essential. Additionally,
+                        monitoring and proactive issue resolution play a crucial role in maintaining a stable and
+                        reliable mobile app.</p>
+                </div>
             </section>
         </div>
 
